@@ -1,0 +1,138 @@
+.trivia-view {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: 
+  "subtitle subtitle"
+  "form current-trivia"
+  "trivias chats";
+  row-gap: 2em;
+  width: 100%;
+  height: 100%;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 1em;
+}
+
+.page-title {
+  grid-area: subtitle;
+  font-size: 2.8em;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}
+
+.trivia-form {
+  grid-area: form;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 400px;
+  height: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+.trivia-label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.trivia-input {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.trivia-button {
+  margin-top: auto;
+}
+
+.current-trivia {
+  box-sizing: border-box;
+  grid-area: current-trivia;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 600px;
+  height: 320px;
+}
+
+.current-question,
+.current-answer {
+  font-size: 1.2rem;
+}
+
+.current-question {
+  width: inherit;
+  margin-bottom: 1rem;
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+.current-answer {
+  width: inherit;
+  margin-bottom: 1rem;
+  max-height: 80px;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+.trivias {
+  box-sizing: border-box;
+  grid-area: trivias;
+  min-height: 300px;
+  max-height: 300px;
+  width: 600px;
+}
+
+/* .trivia {
+} */
+
+.trivia-select {
+  cursor: pointer;
+}
+
+.trivia-delete {
+  float: right;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.trivia-chats {
+  grid-area: chats;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  overflow-y: auto;
+  background-color: #313131;
+  scrollbar-width: 1rem;
+  scrollbar-gutter: stable both-edges;
+  /* border: 1px solid #ccc; */
+  /* box-shadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.5) inset; */
+  padding-bottom: 1.5rem;
+  min-height: 300px;
+  max-height: 300px;
+  /* background-color: #007674; */
+}
+
+.trivia-chat {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  margin-top: 1.5rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-bottom: 0;
+}
+
+.trivia-username {
+  font-weight: bold;
+}
