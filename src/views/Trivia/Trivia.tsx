@@ -290,6 +290,7 @@ function Trivia({ videoID, streamWindow, gameStart }: { videoID: string, streamW
   // TODO: Add a visualizer for the timer
   // TODO: Add a leaderboard
   // TODO: Style the page
+  // TODO: Move dummy data to separate file
 
   return (
     <main className='trivia-view'>
